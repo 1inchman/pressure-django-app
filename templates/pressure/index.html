@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html>
+
+    <head>
+        <title>Pressure</title>
+    </head>
+
+    <body>
+        <h1>Pressure says...</h1>
+        <div>
+            hey there motherfucker!
+            <br/>
+            <strong>{{boldmessage}}</strong>
+            <br/>
+        </div>
+        <div>
+            <a href="/pressure/about/">About</a><br/>
+            <img src="{% static "images/blood.jpg" %}"
+                 alt="Picture of BLOOD" />
+        </div>
+    </body>
+
+</html>
