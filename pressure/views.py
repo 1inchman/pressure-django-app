@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 
 def index(request):
@@ -8,5 +7,5 @@ def index(request):
 
 
 def about(request):
-    link = '<a href=/pressure/>click</a>'
-    return HttpResponse(link)
+    context_dict = {'name': "Ax-er"}
+    return render(request, 'pressure/about.html', context=context_dict)
