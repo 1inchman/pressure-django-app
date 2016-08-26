@@ -1,3 +1,6 @@
 from django.contrib import admin
+from pressure.models import Measurment, User
 
-# Register your models here.
+
+admin.site.register(Measurment)
+admin.site.register(User)
