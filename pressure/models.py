@@ -12,8 +12,12 @@ class User(models.Model):
 class Measurment(models.Model):
     systolic = models.FloatField()
     diastolic = models.FloatField()
-    date = models.DateTimeField()
-    user_id = models.ForeignKey(User)
+    date = models.DateField(auto_now=True)
+    # user_id = models.ForeignKey(User)
+    #
+    # def __str__(self):
+    #     return self.user_id
 
     def __str__(self):
-        return self.systolic
+        return '{} by {} on {}'.format(self.systolic, self.diastolic,
+                                       self.date)
