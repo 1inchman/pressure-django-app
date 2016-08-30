@@ -1,26 +1,22 @@
 <!DOCTYPE html>
+{% extends "pressure/base.html" %}
 
-{% load staticfiles %}
+{% block title %}
+  About this app
+{% endblock %}
 
-<html>
+{% block header-nav %}
+  <li><a href="/pressure/">Home</a></li>
+  <li><a href="/pressure/plot/">Plot</a></li>
+  <li class="active"><a href="#">About</a></li>
+  <li><a href="#">Register</a></li>
+{% endblock %}
 
-    <head>
-        <title>About</title>
-    </head>
-
-    <body>
-        <h1>About says...</h1>
-        <div>
-            hey there motherfucker!
-            <br/>
-            <strong>This tutorial has been nailed by {{name}}</strong>
-            <br/>
-        </div>
-        <div>
-            <a href="/pressure/">Index</a><br/>
-            <img src="{% static "images/blood.jpg" %}"
-                 alt="Picture of BLOOD" />
-        </div>
-    </body>
-
-</html>
+{% block body %}
+  <h1 class="cover-heading">About this app.</h1>
+  <p class="lead">This app is designed to</p>
+  <p class="lead">
+    test Django-based applications with Twitter bootstrap css templates and learn how to use it
+    here and there. Besides, this app is able to memorize blood pressure measurments in order to plot dynamics based on a period of time.
+  </p>
+{% endblock %}

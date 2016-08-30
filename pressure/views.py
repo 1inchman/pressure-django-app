@@ -22,3 +22,7 @@ def index(request):
         form = MeasurmentForm()
 
     return render(request, 'pressure/index.html', {'form': form})
+
+
+def plot(request):
+    return render(request, 'pressure/plot.html')
